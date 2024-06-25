@@ -3,43 +3,33 @@
 <html lang="en"> <!-- KO = 한국 -->
     <!--<head>태그는 머리부 : 이 문서의 각종 정보와 제목, 설명, 스크립트,
         스타일 등을 작성 -->
-<head>
-    <meta charset="UTF-8"> <!-- 한글 문자 설정 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 모바일에서 ui 설정 -->>
-    <meta name="author" content="jinho">
-    <meta name="generator" content="VSCode">
-    <meta name="생성일" content="2024-06-24">
-    <meta name="desciption" content="html5를 처음 배우는 문서">
-    <title>처음 HTML5</title>
-</head>
-<body>
-    HTML5를 처음 시작합니다.<br>
-    <!-- <br> : 줄바꿈 태그-->
-    W3C는 HTML 4.01 이후 XML 기반의 XHTML로 웹 표준의 방향을 변경하였다.<br> 
-    그러나 XML의 까다로운 문법은 웹 개발자들에게 그리 잘 받아들여지지 못했다.<br>
+    <head>
+        <meta charset="UTF-8"> <!-- 한글 문자 설정 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 모바일에서 ui 설정 -->>
+        <meta name="author" content="jinho">
+        <meta name="generator" content="VSCode">
+        <meta name="생성일" content="2024-06-24">
+        <meta name="desciption" content="html5를 처음 배우는 문서">
+        <title>처음 HTML5</title>
+    </head>
+    <body>
+        HTML5를 처음 시작합니다.<br>
+        <!-- <br> : 줄바꿈 태그-->
+        WHATWG[1]와 W3C가 발표하는 HTML의 최신 버전으로, 
+        2014년 10월 28일 완전히 표준화되었다.<br>
+        XHTML에서 다시 HTML로 회귀하게 되었다.<br> 
+        따라서 HTML5는 XHTML의 상위 버전이 아니라, 
+        HTML4.01의 상위 버전이다.<br> 
+        완전히 XHTML 문법을 버린 것은 아니고 선택적으로 이용할 수 있게 되어있다.<br> 
+        어도비 플래시나 실버라이트 등의 플러그인을 기반으로 하는 응용 프로그램에 
+        대한 필요성을 줄이는 것에 초점을 맞추고 있다.<br> 
+        이러한 방향성 덕분에 한국에서는 웹 표준에 대한 문제가 이슈로 떠오르면서 
+        함께 주목을 받기도 하였다.<br><br>
 
-    2004년 6월 W3C 회의에서 모질라 재단과 오페라 소프트웨어는 새로운 HTML 표준 제안서를 제출하였다.<br> 
-    그러나 이는 "웹의 혁명을 위한 기존의 지향점에 위배된다"라는 이유로 거절되었다.[2]
-    2004년 6월, 웹 브라우저 제공 기업인 애플, 모질라, 
-    오페라 소프트웨어의 구성원들이 독자적으로 새로운 웹표준 기관 WHATWG를 설립했다.<br>
-    WHATWG는 기존의 HTML 등의 웹 기술에 응용 프로그램의 작성을 위한 기능을 추가한 
-    Web Applications 1.0이라는 표준을 정립했다.<br>
-    2006년 10월 W3C의 팀 버너스 리는 웹의 XML로의 전환이 실패했음을 시인했고, 
-    다음 해인 2007년부터 W3C는 WHATWG와 협업하여 HTML5의 표준을 만들기 시작했다.<br>
-    한편 WHATWG는 W3C와 협업을 진행하면서도 W3C와는 별도로 독자적인 HTML 표준의 작업을 시작했고, 
-    이후 Web Applications 1.0과 HTML 표준을 합쳐 HTML Living Standard라는 이름으로 발표했다. 
-    HTML Living Standard는 W3C의 HTML5와는 달리 버전이 없이 그때그때 업데이트된다.<br>
-    2014년 10월 28일, HTML5의 최종 권고안이 확정되어 최신 표준으로 지정되었다.<br>
-    2016년 11월 1일, HTML5의 버전업인 HTML 5.1이 최신 표준으로 지정되었다.<br>
-    2017년 12월 14일. HTML 5.1의 버전업인 HTML 5.2가 최신 표준으로 지정되었다.<br> 
-    또한 HTML 5.3이 워킹 드래프트 단계에 돌입했다.<br<br>
-
-    2019년 5월 28일. 따로 각자의 표준을 발표하던 W3C와 WHATWG가 이제 함께 표준 작업을 진행하고, 
-    두개의 표준을 단일화해 앞으로 WHATWG가 하나의 표준을 발표하기로 하였다.<br>
-     즉, HTML5의 표준은 WHATWG의 Living Standard가 유일하게 되었다.<br>
-    2021년 1월 28일, W3C가 공식적으로 기존의 HTML 5.1, 
-    HTML 5.2 표준과 HTML 5.3 표준화 작업을 모두 폐기했다.<br> 
-    이미 2018년에 HTML 4.01, XHTML 1.1, 
-    HTML5 등 과거의 표준을 모두 폐기했기 때문에 WHATWG HTML Living Standard만이 HTML 표준이 되었다.<br>
-</body>
+        HTML5라는 말은 의미가 넓어져, 
+        꼭 W3C의 HTML5 표준만이 아닌 
+        최신 웹 기술(HTML Living Standard, CSS3+, ECMAScript 6+ 등)을 
+        통틀어 칭하기도 한다.<br> 
+        HTML5가 상용화되면서 어도비 플래시는 지원 중단 절차를 밟게 되었다.<br>
+    </body>
 </html>
