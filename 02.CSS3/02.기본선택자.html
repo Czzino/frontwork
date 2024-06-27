@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS 기본선택자</title>
 </head>
+
 <body>
     <h1>CSS 기본선택자</h1>
-    
+
     <h3>선택자란?</h3>
     <p>
         특정 html요소를 선택하고자 할 때 사용하는 기능<br>
@@ -33,7 +35,7 @@
     <h3>2. 태그 선택자 : 태그명 </h3>
     <p>
         현재 이 문서의 해당 태그들을 모두 선택하고자 할 때 사용<br>
-        여러 태그가 동일한 스타일을 갖는가면 컴마(,)로 여러개를 넣을 수 있다 
+        여러 태그가 동일한 스타일을 갖는가면 컴마(,)로 여러개를 넣을 수 있다
     </p>
     <pre>
         태그명 {
@@ -50,7 +52,9 @@
             background-color: rgb(127, 197, 209);
             color: blue;
         }
-        p, pre {
+
+        p,
+        pre {
             color: black;
         }
     </style>
@@ -98,8 +102,13 @@
 
     <!------------------style--------------------->
     <style>
-        .class1 {background-color: rgb(231, 211, 29);}
-        .class2 {font-size: 25px;}
+        .class1 {
+            background-color: rgb(231, 211, 29);
+        }
+
+        .class2 {
+            font-size: 25px;
+        }
     </style>
 
     <!--
@@ -108,4 +117,5 @@
         - class : 문서내에서 "중복"된 값으로 "여러개" 작성 가능
     -->
 </body>
+
 </html>
