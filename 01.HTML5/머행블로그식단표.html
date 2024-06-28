@@ -4,7 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>천진호 식단표</title>
+    <title>천진호식단표</title>
+    <style>
+        table {
+            border: 1px solid;
+            border-collapse: collapse;
+            /* 기본값:separate 표테두리와 셀테두리 분리하기, 합치기 */
+            border-spacing: 10px;
+            /* 표 테두리와 셀 테두리의 간격 */
+            width: 450px;
+            /* 테이블의 길이 고정 */
+            table-layout: fixed;
+        }
+
+        thead,
+        tfoot {
+            background-color: rgb(169, 193, 245);
+        }
+
+        tbody {
+            background-color: white;
+        }
+
+        th,
+        td {
+            width: 150px;
+            height: 30px;
+            padding: 5px;
+            text-align: center;
+            vertical-align: middle;
+            /* 테이블에서만 사용가능 top|middle(기본값)|bottom */
+            border: 2px solid;
+            font-family: 바탕체;
+            font-weight: bold;
+            /* 글자의 공백이 없어도 중간에 끊어서 내림 */
+            word-break: break-all;
+        }
+
+        .boderTop {
+            border-top: 4px double red;
+        }
+
+        caption {
+            font-size: 25px;
+            font-weight: bold;
+            padding: 10px;
+        }
+    </style>
 </head>
 
 <body>

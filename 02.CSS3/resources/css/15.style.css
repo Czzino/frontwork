@@ -1,0 +1,29 @@
+ul {
+   list-style-type: none;
+   padding: 0;
+   border: 2px solid;
+   height: 40vh;
+   width: 600px;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   color:chocolate;
+   border-color: blue;
+   justify-content: center;
+   border-radius: 20px;
+   background-color: aquamarine;
+   align-content: space-around;
+}
+
+li {
+    width: 100px;
+    height: 100px;
+    background-color: lavender;
+    border: 1px solid;
+    margin: 5px;
+    
+    border-color: blue;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 100px
+}
