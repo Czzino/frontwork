@@ -1,0 +1,117 @@
+body, header, section {
+    text-align: center;
+    width: 80%;
+}
+header {
+    width: 100%;
+    height: 120px;
+    background-color: cornflowerblue;
+    border-bottom: 1px solid;
+    color: white;
+    padding-top: 10px;
+}
+section > div {
+    position: relative;
+    height: 400px;
+    border: 1px solid rgb(252, 240, 4);
+    margin-bottom: 20px;
+    background-size: cover;
+    width: 100%;
+}
+.menu-item {
+    width: 300px;
+    height: 200px;
+    margin: 5px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#menus h2 {
+    color: white;
+    text-shadow: 3px 3px 5px black;
+}
+#menu1 {
+    background: url("../img/food1.jpg") no-repeat center;
+}
+#menu2 {
+    background: url("../img/food2.jpg") no-repeat center;
+}
+#menu3 {
+    background: url("../img/food3.jpg") no-repeat center;
+}
+#menu4 {
+    background: url("../img/food4.jpg") no-repeat center;
+}
+#menu5 {
+    background: url("../img/food5.jpg") no-repeat center;
+}
+#menu6 {
+    background: url("../img/fruits.jpg") no-repeat center;
+}
+#menu7 {
+    background: url("../img/food1.jpg") no-repeat center;
+}
+#menu8 {
+    background: url("../img/food2.jpg") no-repeat center;
+}
+#menu9 {
+    background: url("../img/food3.jpg") no-repeat center;
+}
+#menu10 {
+    background: url("../img/fruits.jpg") no-repeat center;
+}
+#footer {
+    background: url("../img/img1.jpg") no-repeat center;
+}
+
+@media all and (min-width:550px) {
+    section {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    #menu1, #menu2, #menu3, #menu4,#menu5, #menu6, #menu7, #menu8,#menu9, #menu10{
+        width: 49%;
+    }
+    #menu5 {
+        width: 100%;
+    }
+}
+@media all and (min-width:1000px) {
+    #menu1, #menu2, #menu3, #menu4,#menu5, #menu6, #menu7, #menu8,#menu9, #menu10{
+        width: 33%;
+    }
+    #menu5 {
+        width: 66%;
+    }
+}
+#menus {
+    float: left;
+    width: 67%;
+    height: 99%;
+    padding: 3%;
+    text-align: center;
+    font-size: 1.1em;
+}
+/* aside */
+.right-side {
+    float: right;
+    width: 20%;
+    height: 1000px;
+    background-color: coral;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 3px 3px 5px black;
+}
+footer {
+    clear: both;
+    width: 100%;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 3px 3px 5px black;
+}

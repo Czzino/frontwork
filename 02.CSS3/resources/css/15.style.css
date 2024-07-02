@@ -5,7 +5,7 @@ ul {
    height: 40vh;
    width: 600px;
    display: flex;
-   flex-direction: row;
+   /* flex-direction: row; 로우가 기본값 */
    flex-wrap: wrap;
    color:chocolate;
    border-color: blue;
@@ -21,7 +21,6 @@ li {
     background-color: lavender;
     border: 1px solid;
     margin: 5px;
-    
     border-color: blue;
     border-radius: 20px;
     text-align: center;

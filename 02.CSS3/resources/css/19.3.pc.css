@@ -1,0 +1,41 @@
+/* 전체 */
+#wrapper {
+    width: 100%;
+    border: double;
+}
+/* header */
+header {
+    height: 100px;
+    line-height: 70px;
+    background-color: blueviolet;
+    border-bottom: 10px solid;
+    border: solid;
+}
+/* 본문 */
+section {
+    float: right;
+    width: 82%;
+    height: 600px;
+    background-color: white;
+    border: solid;
+    font-size: 25px;
+}
+/* aside */
+aside {
+    float: left;
+    width: 15%;
+    height: 600px;
+    border-right: 10px solid;
+    font-size: 20px;
+    background-color: rgb(197, 145, 246);
+    border: groove;
+}
+/* footer */
+footer {
+    clear: both;
+    height: 200px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: black;
+    border: dashed;
+}
