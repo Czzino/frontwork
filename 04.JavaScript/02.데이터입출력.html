@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,18 +10,17 @@
             border: 1px solid;
         }
     </style>
-
 </head>
 <body>
     <h1>자바스크립트에서의 데이터입출력</h1>
     <!--
-        * window :자바스크립트 내장 객체로 브라우저 창이 열릴때마다 하나씩 만들어지는 객체
-                  브라우저 창 안에 존재하는 모든 요소들의 최상의 객체(생략가능)   
-        * document : 웹 문서마다 하나씩 만들어지는 객체(html문서에 대한 정보들을 가지고 있음)
+        * window : 자바스크립트 내장 객체로 브라우저 창이 열릴때마다 하나씩 만들어지는 객체
+                    브라우저 창 안에 존재하는 모든 요소들의 최상위 객체(생략가능)
+        * document : 웹 문서마다 하니씩 만들어지는 객체(html문서에 대한 정보들을 가지고 있음)
     -->
     <h2>1. 데이터 출력하는 구문</h2>
     <p>
-        1) [window.].alert("알림창에 출력할 문구");
+        1) [window.]alert("알림창에 출력할 문구");
         2) [window.]console.log("콘솔창에 출력할 문구");
         3) document.write("화면에 출력할 문구");
         4) 선택한요소.innerHTML|innerText="요소에 출력할 문구"
@@ -28,25 +28,33 @@
 
     <h3> 3) document.write("화면에 출력할 문구");</h3>
     <button onclick="docWrite();">화면에 출력</button>
-    
+
     <script>
         function docWrite() {
             document.write("안녕하세요");
-            document.write("<br><b>안녕하세요<b><br><h2>반가워요</h2>");
-            // 출력할 문구에 html태그가 있을 경우 해석하여 시각적인 요소로 보여짐     
+            document.write("<br><b>안녕하세요</b><br><h2>반가워요</h2>");
+            // 출력할 문구에 html태그가 있을 경우 해석하여 시각적인 요소로 보여짐
 
+            // document.write("<table border='1'><tr><td>HTML</td><td>CSS</td></tr><tr><td></td><td></td></tr></table>");
             var print = "<table border='1'>";
                 print += "  <tr>";
-                print += "     <td>HTML</td>";
-                print += "     <td>CSS</td>";
-                print += "     <td>JAVASCRIPT</td>";    
-                print += "  </tr>";    
+                print += "      <td>HTML</td>";
+                print += "      <td>CSS</td>";
+                print += "      <td>JAVASCRIPT</td>";
+                print += "  </tr>";
                 print += "</table>";
-            document.write(print); 
-        
+            document.write(print);
+
+            document.write("<table border='1'>" 
+                        + "     <tr>"
+                        + "         <td>HTML</td>"
+                        + "         <td>CSS</td>"
+                        + "         <td>JAVASCRIPT</td>"
+                        + "     </tr>"
+                        + " </table>");
         }
     </script>
-
+    
     <h3> 4) 선택한요소.innerHTML|innerText="요소에 출력할 문구"</h3>
     <div class="area" id="area1">
         자바스크립트에서 어떤 요소(element)안의 값(content)을 가지고 온다거나
@@ -63,27 +71,23 @@
             // console.dir : 해당 값의 디렉토리 구조를 보고자 할 때 사용(속성에 대한 정보)
 
             // 선택된 요소의 속성에 접근가능(.을 통해 접근)
-            console.log(divE1.id);          // id : 해당 요소의 아이디 속성의 값
+            console.log(divE1.id);      // id : 해당 요소의 아이디 속성의 값
             console.log(divE1.className);   // class : 해당 요소의 클래스 속성의 값
 
-            console.log(divE1.innerHTML);   // innerHTML : 요소의 content영역안의 html태그까지 다 가져옴
-            console.log(divE1.innerText);   // innerText : 요소의 content영역안의 text만 포함(html태그)
-        
+            console.log(divE1.innerHTML);   // innerHTML : 요소의 content영역안의 html태그까지 다 포함
+            console.log(divE1.innerText);   // innerText : 요소의 content영역안의 text만 포함(html태그x)
+
             // 해당 요소의 속성값 변경 가능 : 속성에 접근 후 대입을 통해 변경
-            // innerHTMl은 태그를 인식하여 태그의 형태대로 보여줌
-            divE1.innerHTML = "<h2>innerHTML로 속성값 변경함<h2>";
-            divE1.style.backgroundColor = "yellow";    
-            // divE1.style.color = "blue";
-            // divE1.style.border = "solid";
-            // divE1.style.fontSize = "10px";    
-            // divE1.style.textAlign = "center";    
+            // innerHTML은 태그를 인식하여 태그의 형태대로 보여줌
+            divE1.innerHTML = "<h2>innnerHTML로 속성값 변경함</h2>";
+            divE1.style.backgroundColor = "yellow";
 
             // innerText는 무조건 다 문자로 인식(태그인식 안함)
-            divE1.innerTExt = "<h2>innerText로 속성값 변경함</h2>";
-            divE1.style.color = "red";
+            divE1.innerText = "<h2>innerText로 속성값 변경함</h2>";
+            divE1.style.color="red";
         }
     </script>
-    
+
     <h2>2. 데이터 입력받는 구문(변수에 기록 가능)</h2>
     <p>
         1) 변수 = [window.]confirm("질문내용"); <br>
@@ -95,7 +99,7 @@
     <h3>1) [window.]confirm("질문내용");</h3>
     <p>
         confirm 호출시 "질문내용"과 "확인/취소" 버튼이 존재하는 알림창 발생<br>
-        확인,버튼 클릭시 true, 취소 버튼 클릭시 false가 반환
+        확인 버튼 클릭시 true, 취소 버튼 클릭시 false가 반환
     </p>
 
     <button onclick="testConfirm();">클릭</button>
@@ -105,7 +109,7 @@
         function testConfirm() {
             var result = confirm("재미있으면 확인, 아니면 취소를 누르세요");
             // console.log(result);
-            
+
             if(result) {
                 console.log("정말 너무 재밌죠");
             } else {
@@ -121,33 +125,27 @@
         }
     </script>
 
-    <h3>[window.]prompt("질문내용");</h3>
-    <P>
+    <h3>2) [window.]prompt("질문내용");</h3>
+    <p>
         prompt호출시 "질문내용"과 입력할 수 있는 "텍스트 상자"와
         "확인/취소" 버튼이 보여지는 알림창 발생<br>
-        확인버튼 클릭시 텍스트상자에 입력한 값이 문자열로 반환,
+        확인 버튼 클릭시 텍스트상자에 입력한 값이 문자열로 반환, 
         취소 버튼 클릭시 null 반환
-    </P>
+    </p>
     <button onclick="testPrompt();">클릭</button>
-    <div id="area3"></div>>
+    <div id="area3"></div>
 
     <script>
         function testPrompt() {
-           var name = prompt("당신의 이름은 무엇입니까?");
-           var age = prompt("당신의 나이는 몇살입니까?");
+            var name = prompt("당신의 이름은 무엇입니까?");
+            var age = prompt("당신의 나이는 몇살입니까?");
 
-           console.log("이름 : " + name);
-           console.log("나이 " + age);
-           '당신이 바로 ??살  ??님 이군요'
-           
-        // 내코드
-        //   var prompt1 = "당신이 바로 " + age + "살  " + name + "님이군요";
-        //   console.log(prompt1);
+            console.log("이름 : " + name);
+            console.log("나이 : " + age);
 
-        // 강사님코드
-         var divE3 = document.getElementById("area3");
-         divE3.innerHTML = "당신이 바로<b>" + age + "살" + name + "님</b> 이군요";
-    }
+            var divE3 = document.getElementById("area3");
+            divE3.innerHTML = "당신이 바로 <b>" + age + "살 " + name + "님</b> 이군요";
+        }
     </script>
 
     <br>
@@ -155,60 +153,51 @@
     <button onclick="testPrompt2();">숫자입력</button>
     <ul id="area4"></ul>
 
-
     <script>
-        function testPrompt2() {
+       function testPrompt2() {
             var num = prompt("숫자만 입력하세요");
 
-            // for(var i=1; i<=num; i++){
-            //     consol.log(i);
-            // }
+            for(var i=1; i<=num; i++) {
+                console.log(i);
+            }
 
             var ul = document.getElementById("area4");
 
-            for(var i=1; i<=num; i++){
-                ul.innerHTML += "<li>목록"+ i +"</li>";
+            for(var i=1; i<=num; i++) {
+                ul.innerHTML += "<li>목록" + i + "</li>";
             }
-
-            // 덮어 쓰기
+            
             var str = "";
-            for(var i=1; i<=num; i++){
-                str += "<li>목록"+ i +"</li>";
+            for(var i=1; i<=num; i++) {
+                str += "<li>목록" + i + "</li>";
             }
             document.getElementById("area4").innerHTML = str;
-
-        }
+       } 
     </script>
 
-    <h3>4) 선택한input요소.value</h3>    
+    <h3>4) 선택한input요소.value</h3>
     아이디 : <input id="userId"><br>
-    비밀번호 : <input type="password" id="userPw"><br>
-    <button onclick="testInput();">로그인</button>
-    <br>
-    <input id="area5">
+    비밀번호 : <input type="password" id="userPW"><br>
+    <button onclick="testInput();">로그인</button><br><br>
 
+    <input id="area5">
 
     <script>
         function testInput() {
             var input1 = document.getElementById("userId");
-            var input2 = document.getElementById("userPw");
-
-            // console.log(input1);
-            // console.log(input2);
+            var input2 = document.getElementById("userPW");
 
             console.dir(input1);
 
-            // 사용자가 넣은 값을 얻어옴
             var id = input1.value;
             console.log(id);
             var pw = input2.value;
 
-            document.getElementById("area5").value = id + "," + pw;
-         
-            input1.value = "";
-            input2.value = "";
+            document.getElementById("area5").value = id + ", " + pw;
+
+            input1.value="";
+            input2.value="";
         }
     </script>
-         
 </body>
 </html>
