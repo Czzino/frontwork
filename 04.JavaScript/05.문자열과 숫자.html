@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
         }
     </style>
 </head>
+
 <body>
     <h1>문자열과 숫자</h1>
 
@@ -22,7 +24,7 @@
     <script>
         function stringTest() {
             const area1 = document.getElementById('area1');
-                      //  document.querySelector('#area1');
+            //  document.querySelector('#area1');
 
             const str1 = 'Hello World';
 
@@ -33,7 +35,7 @@
             area1.innerHTML += `문자열의 길이 : ${str1.length}<br>`;
             area1.innerHTML += '----------------------<br>';
 
-            for(let i=0; i<str1.length; i++) {  
+            for (let i = 0; i < str1.length; i++) {
                 // area1.innerHTML += `${i}번 인덱스 : ${str1[i]}<br>`;
                 area1.innerHTML += `${i}번 인덱스 : ${str1.charAt(i)}<br>`;
             }
@@ -91,7 +93,7 @@
             area3.innerHTML = `-123의 절대값 : ${Math.abs(-123)}<br>`;
             area3.innerHTML += `랜덤값 : ${Math.random()}<br>`;
             area3.innerHTML += `145.897의 반올림 : ${Math.round(145.897)}<br>`;
-            area3.innerHTML += `145.897의 반올림 : ${Math.round(145.897,1)}<br>`; // 위치조정 불가
+            area3.innerHTML += `145.897의 반올림 : ${Math.round(145.897, 1)}<br>`; // 위치조정 불가
             area3.innerHTML += `145.897의 버림 : ${Math.floor(145.897)}<br>`;
             area3.innerHTML += `145.123의 올림 : ${Math.ceil(145.123)}<br>`;
         }
@@ -123,7 +125,7 @@
             let test6 = '7' - 6;
             let test7 = '7' * 3;
             let test8 = '7' / 3;
-            
+
             area4.innerHTML += `test6 : ${test6}<br>`;
             area4.innerHTML += `test7 : ${test7}<br>`;
             area4.innerHTML += `test8 : ${test8}<hr>`;
@@ -177,6 +179,7 @@
             let sum = num1 + num2;
             console.log(sum);
 
+            // Number안에는 문자열 
             sum = Number(num1) + Number(num2);
 
             document.getElementById('result').innerHTML = `결과 : ${sum}`;
@@ -196,9 +199,9 @@
         function example() {
             const text = prompt("글자를 입력하세요");
             let count = 0;
-            if(text) {  // if(text != null)
-                for(let i=0; i<text.length; i++) {
-                    if(text[i] >= 'a' && text[i] < 'z') {
+            if (text) {  // if(text != null)
+                for (let i = 0; i < text.length; i++) {
+                    if (text[i] >= 'a' && text[i] < 'z') {
                         count++;
                     }
                 }
@@ -207,4 +210,5 @@
         }
     </script>
 </body>
+
 </html>
